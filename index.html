@@ -60,7 +60,14 @@ footer{border-top:1px solid #ffffff16}
  .benefit:nth-child(2){border-left:0}
 }
 @media(max-width:650px){
- .container{width:min(100% - 32px,1180px)}
+ /* Keep the header within narrow phone screens */
+ .container{width:min(100% - 24px,1180px)}
+ .topline{font-size:10px;line-height:1.5;padding:5px 8px;white-space:normal}
+ .navinner{width:calc(100% - 24px);min-width:0;gap:8px}
+ .brand{min-width:0;gap:7px}
+ .brandname{font-size:15px;white-space:nowrap}
+ .actions{flex-shrink:0}
+ .actions .btn{display:none}
  .topline{font-size:11px}
  .navinner{min-height:70px;gap:10px}
  .brand{gap:9px}
