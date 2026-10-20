@@ -46,8 +46,8 @@ closeModal.addEventListener('click',closeFormModal);
 formModal.addEventListener('click',e=>{if(e.target===formModal)closeFormModal();});
 document.addEventListener('keydown',e=>{if(e.key==='Escape')closeFormModal();});
 
-document.querySelectorAll('.category-btn').forEach(btn=>btn.addEventListener('click',()=>{
- document.querySelectorAll('.category-btn').forEach(b=>b.classList.remove('selected'));
+document.querySelectorAll('#categoryPanel .category-btn').forEach(btn=>btn.addEventListener('click',()=>{
+ document.querySelectorAll('#categoryPanel .category-btn').forEach(b=>b.classList.remove('selected'));
  btn.classList.add('selected'); sourceSelect.value=btn.dataset.source;
  auctionPanel.classList.add('modal-open');
  formModal.classList.add('open'); document.body.classList.add('modal-active'); closeModal.focus();
