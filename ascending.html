@@ -19,11 +19,15 @@ document.querySelectorAll('.role-choice').forEach(btn=>btn.addEventListener('cli
  if(role==='seller'){
    categoryPanel.classList.add('role-visible');
    listPanel.classList.remove('role-visible');
-   categoryPanel.scrollIntoView({behavior:'smooth',block:'start'});
+   categoryPanel.style.display='block';
+   listPanel.style.display='none';
+   categoryPanel.scrollIntoView({behavior:'auto',block:'start'});
  }else{
    categoryPanel.classList.remove('role-visible');
+   categoryPanel.style.display='none';
    listPanel.classList.add('role-visible');
-   listPanel.scrollIntoView({behavior:'smooth',block:'start'});
+   listPanel.style.display='block';
+   listPanel.scrollIntoView({behavior:'auto',block:'start'});
  }
 }));
 
